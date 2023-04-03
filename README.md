@@ -106,5 +106,5 @@ This project involves extracting data from a food service app, cleaning it, and 
 
 <br/>
 <br/>
-<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/reviews_after_schema.jpg" width="400">
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/reviews_after_schema.JPG" width="400">
 <br/>
