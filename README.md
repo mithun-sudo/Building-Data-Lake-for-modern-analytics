@@ -30,7 +30,7 @@ This project involves extracting data from a food service app, cleaning it, and 
 - In that database, three tables named 'restaurant_info', 'items' and 'reviews'.
 - Using beautiful soup data were extracted from the website and loaded into SQL server.
 - The tables had these schemas:
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
 -The tables were converted into csv files using the command:
 
     SELECT * FROM restaurant_info INTO OUTFILE '/var/lib/mysql-files/restaurant_info.csv' FIELDS TERMINATED BY '|' ENCLOSED BY '"' LINES TERMINATED BY '\n';
@@ -62,14 +62,4 @@ This project involves extracting data from a food service app, cleaning it, and 
 - The data as it is, is of no use. Some data cleansing and proceesing has to be performed so that data driven decisions can be taken.
 
 - Schema of table restaurant_info:
-root
- |-- id: long (nullable = true)
- |-- name: string (nullable = true)
- |-- url: string (nullable = true)
- |-- discount: string (nullable = true)
- |-- categories: string (nullable = true)
- |-- cost: string (nullable = true)
- |-- orders_placed: string (nullable = true)
- |-- stars: string (nullable = true)
- |-- timings: string (nullable = true)
 
