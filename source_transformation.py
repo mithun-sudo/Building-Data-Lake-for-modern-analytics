@@ -12,7 +12,7 @@ sc = SparkContext.getOrCreate()
 glueContext = GlueContext(sc)
 spark = glueContext.spark_session
 job = Job(glueContext)
-dyf = glue_context.create_dynamic_frame.from_catalog(database='database_name', table_name='table_name')
+dyf = glue_context.create_dynamic_frame.from_catalog(database='scrap_database', table_name='restaurant_info')
 df = dyf.toDF()
 # Extracting the cost from a string and casting it into integer.
 df = df.select("*", split(col("cost"), ' ')[0].alias("cost_for_one")).drop("cost")
