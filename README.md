@@ -108,3 +108,18 @@ This project involves extracting data from a food service app, cleaning it, and 
 <br/>
 <img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/reviews_after_schema.JPG" width="400">
 <br/>
+
+##### Categories:
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/categories.JPG" width="400">
+<br/>
+
+##### Discount:
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/discount.JPG" width="400">
+<br/>
+
