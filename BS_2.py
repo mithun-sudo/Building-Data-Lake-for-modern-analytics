@@ -3,7 +3,7 @@ import requests
 from sqlalchemy import create_engine
 
 
-# This function populated data into SQL server.
+# This function populates data into SQL server.
 def data_populator(row_dict):
     data = {}
     data["items"] = []
