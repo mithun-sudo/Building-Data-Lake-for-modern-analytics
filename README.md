@@ -23,7 +23,10 @@ This project involves extracting data from a food service app, cleaning it, and 
 - Cleaning the data and converting it to a standard format.
 - Loading the data in datamarts for end users.
 ***
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+## Architecture:
+<br/>
+<br/>
+![](https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/Data%20lake/Architecture.png)
 ***
 ## Project
 - Create a database 'main' in SQL server in ubuntu environment (local system)
