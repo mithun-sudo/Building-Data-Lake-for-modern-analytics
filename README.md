@@ -133,6 +133,12 @@ This project involves extracting data from a food service app, cleaning it, and 
 
 ## Major Transformations:
 
+Lot of transformations were performed on the raw data. But here only example of significant transformations are shared.
+For code refer [source_transformation.py](https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/source_transformation.py) ,
+[items_transformation.py](https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/items_transformation.py) , [reviews_transformation.py](https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/reviews_transformation.py)
+
+
+
 ##### Example No.1:
 
 <br/>
