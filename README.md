@@ -26,7 +26,7 @@ This project involves extracting data from a food service app, cleaning it, and 
 ## Architecture:
 <br/>
 <br/>
-<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/Data%20lake/Architecture.png" width="700">
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/Architecture.png" width="700">
 <br/>
 
 ***
@@ -34,7 +34,25 @@ This project involves extracting data from a food service app, cleaning it, and 
 - Create a database 'main' in SQL server in ubuntu environment (local system)
 - In that database, three tables named 'restaurant_info', 'items' and 'reviews'.
 - Using beautiful soup data were extracted from the website and loaded into SQL server.
-- The tables had these schemas:
+- The tables had these initial schemas:
+##### restaurant_info:
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/restaurant_schema.JPG" width="400">
+<br/>
+##### food_items:
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/item_schema.JPG" width="400">
+<br/>
+##### reviews:
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/reviews.jpg" width="400">
+<br/>
 
 -The tables were converted into csv files using the command:
 
