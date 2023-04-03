@@ -3,6 +3,7 @@ import requests
 from sqlalchemy import create_engine
 
 
+# This function populated data into SQL server.
 def data_populator(row_dict):
     data = {}
     data["items"] = []
@@ -22,6 +23,7 @@ def data_populator(row_dict):
             except AttributeError:
                 data[key] = row_dict[key]
     for item in data["items"]:
+        # Inserting data into SQL database.
         connection.execute(F"""
         INSERT INTO restaurant_items (name, address, url, timings, no_of_reviews, deliver_rating, item_name, 
         item_cost, item_description, veg_non_veg) 
@@ -32,7 +34,7 @@ def data_populator(row_dict):
 
 
 
-
+# Intializing connection to SQL server database through SQL alchemy.
 conn_str = "mysql+pymysql://{user}:{password}@{host}:{port}/{database}".format(
     user="root",
     password="password",
@@ -45,7 +47,7 @@ engine = create_engine(conn_str)
 
 # connect to the database
 connection = engine.connect()
-
+# Returns a list of restaurant whose data is missing the database.
 result = connection.execute("""
 select url from source where name not in (select name from restaurant_items);
 """).fetchall()
@@ -56,11 +58,10 @@ for row in result:
     link = f"https://www.zomato.com{row[0]}"
     agent = {"User-Agent":'Mozilla/5.0 (Windows NT 6.3; WOW64)'}
     response = requests.get(url=link, headers=agent)
-    # print(response.text)
-    # with open("pastries.txt", "w", encoding='utf-8') as file:
-    #     file.write(response.text)
     soup = BeautifulSoup(response.text, "html.parser")
+    # Using data structure dictionary to store data locally before loading it inside database.
     row = {}
+    # Through various combinations of class name tags, headings tag, anchor tags the required data is located. 
     row["name"] = soup.find(class_="sc-7kepeu-0 sc-iSDuPN fwzNdh")
     row["address"] = soup.find(class_="sc-clNaTc vNCcy")
     try:
