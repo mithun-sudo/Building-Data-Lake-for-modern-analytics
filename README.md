@@ -87,6 +87,10 @@ This project involves extracting data from a food service app, cleaning it, and 
 - Then it calls the glue crawler 'Scraped-data-crawler' to crawl through 'transformation-1-zone' bucket and stores meta data in glue catalog.
 - The data as it is, is of no use. Some data cleansing and proceesing has to be performed so that data driven decisions can be taken.
 
+
+***
+
+
 ## Schema of table after transformation:
 ##### Restaurant info:
 
@@ -122,6 +126,10 @@ This project involves extracting data from a food service app, cleaning it, and 
 <br/>
 <img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/discount.JPG" width="400">
 <br/>
+
+
+***
+
 
 ## Major Transformations:
 
@@ -180,3 +188,4 @@ This project involves extracting data from a food service app, cleaning it, and 
 <img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/orders%20placed%20cost%20after.JPG" width="400">
 <br/>
 
+***
