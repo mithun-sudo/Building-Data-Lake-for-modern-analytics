@@ -195,3 +195,5 @@ For code refer [source_transformation.py](https://github.com/mithun-sudo/Buildin
 <br/>
 
 ***
+
+The transformed data are prepared using Apache Spark. On these data, future analysis can be performed by analysts and can add value to the business.
