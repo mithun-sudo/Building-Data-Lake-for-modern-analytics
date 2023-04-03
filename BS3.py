@@ -4,7 +4,7 @@ import re
 from json import loads
 from sqlalchemy import create_engine
 
-
+# Extracts json from the webpage that contains restaurant data
 def json_Extractor(page_link):
     agent = {"User-Agent": 'Mozilla/5.0 (Windows NT 6.3; WOW64)'}
     response = requests.get(url=page_link, headers=agent)
@@ -15,13 +15,7 @@ def json_Extractor(page_link):
     decoded_json = loads(double_decoded_json)
     return loads(decoded_json)
 
-
-# def remove_HTML_tags(comment):
-#     re_pattern = re.compile('<.*?>')
-#     cleantext = re.sub(, '', comment)
-#     return cleantext
-
-
+# Intializing connection to SQL server database through SQL alchemy.
 conn_str = "mysql+pymysql://{user}:{password}@{host}:{port}/{database}".format(
     user="root",
     password="password",
@@ -34,10 +28,11 @@ engine = create_engine(conn_str)
 
 # connect to the database
 connection = engine.connect()
-
+# Return list of restaurant url whose data are missing in database.
 result = connection.execute("""
 select url from source where name not in (select restaurant_name from restaurant_reviews) order by url desc;
 """).fetchall()
+# Required data is located from json.
 for row in result:
     source_link = f'https://www.zomato.com{row[0].replace("order", "")}reviews'
     print(source_link)
@@ -59,6 +54,7 @@ for row in result:
                 type = reviews[user]['ratingV2Text']
                 rating = reviews[user]['ratingV2']
                 timestamp = reviews[user]['timestamp']
+                # Inserting data into SQL database.
                 connection.execute(f"""
                 INSERT INTO restaurant_reviews (restaurant_name, user_name, reviews, timestamp, ratings, type)
                 VALUES ("{restaurant_name}", "{username}", "{review}", "{timestamp}",
