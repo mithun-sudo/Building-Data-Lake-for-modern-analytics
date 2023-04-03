@@ -123,3 +123,60 @@ This project involves extracting data from a food service app, cleaning it, and 
 <img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/discount.JPG" width="400">
 <br/>
 
+## Major Transformations:
+
+##### Example No.1:
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/discount_categories%20before%20transformation.JPG" width="400">
+<br/>
+
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/discount%20after.JPG" width="400">
+<br/>
+
+##### Example No.2:
+
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/discount_categories%20before%20transformation.JPG" width="400">
+<br/>
+
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/category%20after.JPG" width="400">
+<br/>
+
+##### Example No.3:
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/timings%20before%20after.JPG" width="400">
+<br/>
+
+##### Example No.4:
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/review_date_before_after.JPG" width="400">
+<br/>
+
+
+##### Example No.5:
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/cost%20order%20placed%20before%20transformation.JPG" width="400">
+<br/>
+
+
+<br/>
+<br/>
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/orders%20placed%20cost%20after.JPG" width="400">
+<br/>
+
