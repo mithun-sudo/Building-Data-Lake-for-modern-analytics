@@ -28,7 +28,6 @@ df = df.withColumn("hashed_user_name", hash(col("user_name"))).drop('user_name')
 df = df.withColumn("ratings", col("ratings").cast("Float"))
 # Using regular expressions to remove html tags from reviews that came along during scraping.
 df = df.withColumn("reviews", regexp_replace("reviews", "<[^>]*>", ''))
-df = df.withColumn("raw_timestamp", col("timestamp"))
 # Following transformations to convert the column into timestamp format.
 df = df.withColumn("timestamp", regexp_replace("timestamp", "one", '1'))
 df = df.withColumn("timestamp", regexp_replace("timestamp", "yesterday", '1 days ago'))
@@ -75,6 +74,6 @@ when timestamp[2] != 'ago' then CONCAT(year, '-', month, '-', day)
 end as date from table;
 """)
 df = df.withColumn("date", to_date("date", "yyyy-MM-dd"))
-df = df.select("id", "hashed_user_name", "reviews", "ratings", "type", "date", "raw_timestamp")
+df = df.select("id", "hashed_user_name", "reviews", "ratings", "type", "date")
 df.write.parquet('s3://tranformation-2-zone/reviews_final.parquet')
 
