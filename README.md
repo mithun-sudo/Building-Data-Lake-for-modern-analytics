@@ -26,7 +26,7 @@ This project involves extracting data from a food service app, cleaning it, and 
 ## Architecture:
 <br/>
 <br/>
-![](https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/Data%20lake/Architecture.png)
+<img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/Data%20lake/Architecture.png" width="700">
 ***
 ## Project
 - Create a database 'main' in SQL server in ubuntu environment (local system)
