@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from sqlalchemy import create_engine
 
 
+# This function populated data into SQL server.
 def data_populator(row_dict):
     data = {}
     for key in row_dict.keys():
@@ -12,14 +13,14 @@ def data_populator(row_dict):
                 data[key] = row_dict[key]
         else:
             data[key] = "NULL"
-
+    # Inserting data into SQL database.
     connection.execute(f"""
     INSERT INTO source (name, url, discount, categories, cost, orders_placed, stars, timings) 
     VALUES ("{data["name"]}", "{data["url"]}", "{data["discount"]}", "{data["categories"]}", "{data["cost"]}", 
     "{data["orders_placed"]}", "{data["stars"]}", "{data["timings"]}");
     """)
 
-
+# Intializing connection to SQL server database through SQL alchemy.
 conn_str = "mysql+pymysql://{user}:{password}@{host}:{port}/{database}".format(
     user="root",
     password="password",
@@ -29,9 +30,11 @@ conn_str = "mysql+pymysql://{user}:{password}@{host}:{port}/{database}".format(
 )
 engine = create_engine(conn_str)
 connection = engine.connect()
+# HTML document of the target webpage is downloaded and from that data is being scraped.
 file_path = r"C:\Users\mithu\Documents\zomato_body.txt"
 html_doc = open(file_path, "r", encoding='utf-8').read()
 soup = BeautifulSoup(html_doc, 'html.parser')
+# Through various combinations of class name tags, headings tag, anchor tags the required data is located. 
 for restaurant in soup.find_all(class_="sc-ZUflv efYsXh"):
     row = {}
     if restaurant:
@@ -52,6 +55,7 @@ for restaurant in soup.find_all(class_="sc-ZUflv efYsXh"):
         #Timings
         row["timings"] = restaurant.find(class_="sc-1hez2tp-0 sc-ljUfdc ipXDgX")
         print(row)
+        
         data_populator(row)
 
 
