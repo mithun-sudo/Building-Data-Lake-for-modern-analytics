@@ -35,24 +35,27 @@ This project involves extracting data from a food service app, cleaning it, and 
 - In that database, three tables named 'restaurant_info', 'items' and 'reviews'.
 - Using beautiful soup data were extracted from the website and loaded into SQL server.
 - The tables had these initial schemas:
-##### restaurant_info:
+##### Restaurant info:
 
 <br/>
 <br/>
 <img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/restaurant_schema.JPG" width="400">
 <br/>
-##### food_items:
+
+##### Food items:
 
 <br/>
 <br/>
 <img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/item_schema.JPG" width="400">
 <br/>
-##### reviews:
+
+##### Reviews:
 
 <br/>
 <br/>
 <img src="https://github.com/mithun-sudo/Building-Data-Lake-for-modern-analytics/blob/main/images/reviews.jpg" width="400">
 <br/>
+
 
 -The tables were converted into csv files using the command:
 
